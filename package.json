@@ -1,7 +1,7 @@
 {
-  "name": "express-mesto-gha",
+  "name": "movies-explorer-api",
   "version": "1.0.0",
-  "description": "http://PSK888.github.io/express-mesto-gha",
+  "description": "http://PSK888.github.io/movies-explorer-api",
   "main": "app.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,7 +22,7 @@
     "lint": "npx eslint .",
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "deploy": "scp -r ../backend/* psk888@51.250.68.120:/home/psk888/backend"
+    "deploy": "scp -r ../movies-explorer-api/* psk888@158.160.56.17:/home/psk888/backend"
   },
   "author": "Pavel Krupin",
   "license": "ISC",
@@ -30,7 +30,6 @@
     "eslint": "^8.29.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.31.11",
     "nodemon": "^2.0.20"
   }
 }
