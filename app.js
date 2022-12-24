@@ -9,6 +9,7 @@ const expressRateLimit = require('express-rate-limit');
 const { errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/error-handler');
+const NotFoundError = require('./errors/NotFoundError');
 
 const { PORT = 3001 } = process.env;
 const limiter = expressRateLimit({ windowMs: 10 * 60 * 1000, max: 1000 });
@@ -32,6 +33,10 @@ mongoose.connect('mongodb://localhost:27017/moviesdb', { useNewUrlParser: true }
 app.use(requestLogger); // подключаем логгер запросов
 
 app.use(routes); // подключаем обработчики роутов
+
+app.use((req, res, next) => {
+  next(new NotFoundError('Такой страницы не существует'));
+});
 
 app.use(errorLogger); // подключаем логгер ошибок
 
