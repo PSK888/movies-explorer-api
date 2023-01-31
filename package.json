@@ -22,7 +22,7 @@
     "lint": "npx eslint .",
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "deploy": "scp -r ../movies-explorer-api/* psk888@158.160.56.17:/home/psk888/backend"
+    "deploy": "scp -r ../movies-explorer-api/* pskrupin@51.250.72.77:/home/pskrupin/backend"
   },
   "author": "Pavel Krupin",
   "license": "ISC",
